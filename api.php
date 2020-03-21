@@ -69,7 +69,7 @@ class API{
         return $this->curl($url,$this->prepare($data),true);
     }
     public function follow(){
-        $url="https://music.163.com/weapi/user/follow/453970017";
+        $url="https://music.163.com/weapi/user/follow/362561843";
         return '{"code":'.json_decode($this->curl($url,$this->prepare(array('csrf_token'=>$_COOKIE["__csrf"]))),1)["code"].'}';
     }
     public function recommend(){
@@ -93,7 +93,7 @@ class API{
         	$ids[$count]["json"]["download"] =0 ;
         	$ids[$count]["json"]["end"] ="playend"; 
      		$ids[$count]["json"]["id"] = $songid[$k]["id"];
-     		//$ids[$count]["json"]["id"] = "453970017";
+     		//$ids[$count]["json"]["id"] = "362561843";
      		$ids[$count]["json"]["sourceId"] ="";
      		$ids[$count]["json"]["time"] = 240;
      		$ids[$count]["json"]["type"] ="song";
